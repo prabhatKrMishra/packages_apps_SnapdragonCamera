@@ -756,7 +756,7 @@ public class CameraUtil {
     }
 
     public static int getFacingOfIntentExtras(Activity currentActivity) {
-        int facing = currentActivity.getIntent().getIntExtra(CameraUtil.EXTRAS_CAMERA_FACING, 0);
+        int facing = currentActivity.getIntent().getIntExtra(CameraUtil.EXTRAS_CAMERA_FACING, -1);
         Bundle extra = currentActivity.getIntent().getExtras();
         if (extra != null && extra.get(CameraUtil.EXTRAS_USE_FRONT_CAMERA) != null) {
             boolean isFront = extra.getBoolean(CameraUtil.EXTRAS_USE_FRONT_CAMERA);
